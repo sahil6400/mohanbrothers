@@ -1,0 +1,494 @@
+Design a premium, modern, highly interactive website for an Indian engineering laboratory and educational equipment manufacturer called “AMBROSS INDIA”.
+
+REFERENCE DIRECTION:
+Take inspiration from the immersive, experimental and editorial web experience of Active Theory (activetheory.net), especially:
+- Large typography
+- Strong visual storytelling
+- Scroll-driven transitions
+- Full-width visual sections
+- Interactive category navigation
+- Large product/project imagery
+- Smooth motion and micro-interactions
+- Minimal but distinctive navigation
+- A website that feels like an experience rather than a conventional catalogue
+
+IMPORTANT:
+Do NOT copy Active Theory’s dark visual style.
+Create a LIGHT, BRIGHT, PREMIUM INDUSTRIAL/ENGINEERING aesthetic.
+
+BRAND CHARACTER:
+Ambross India should feel:
+- Engineering-driven
+- Precise
+- Innovative
+- Trustworthy
+- Educational
+- Industrial
+- Premium
+- Modern Indian engineering company
+- Suitable for universities, engineering colleges, laboratories, institutions and industrial training centres
+
+COLOR DIRECTION:
+Primary background: warm white / off-white
+Secondary background: very light cool grey
+Primary text: deep charcoal / near-black
+Accent color: sophisticated engineering blue
+Secondary accent: subtle orange or copper
+Use colors sparingly.
+
+Avoid:
+- Full dark backgrounds
+- Neon cyberpunk aesthetics
+- Excessive gradients
+- Glassmorphism everywhere
+- Generic corporate blue website look
+- Stock-photo-heavy layouts
+
+TYPOGRAPHY:
+Use a modern geometric sans-serif such as:
+Inter / Manrope / Satoshi / Neue Montreal style.
+
+Large bold editorial typography.
+Headings should be oversized and confident.
+Body typography should remain clean and highly readable.
+
+WEBSITE STRUCTURE:
+
+1. HERO SECTION
+
+Create a dramatic full-screen hero section.
+
+Top navigation:
+AMBROSS INDIA logo on left.
+
+Navigation:
+PRODUCTS
+LABS
+ABOUT
+APPLICATIONS
+RESOURCES
+CONTACT
+
+Right side:
+Search icon
+Menu / navigation button
+
+Hero headline:
+
+“ENGINEERING
+THE WAY
+YOU LEARN.”
+
+Alternative small supporting text:
+“Laboratory equipment, engineering apparatus and educational models for the next generation of engineers.”
+
+Hero visual:
+Use a premium hyper-realistic photograph/render of an engineering laboratory environment containing:
+- Mechanical laboratory equipment
+- Thermodynamics apparatus
+- Fluid mechanics equipment
+- Structural testing equipment
+- Automobile engineering equipment
+- Engineering models
+
+Make the equipment highly detailed and realistic.
+
+The hero should have subtle motion:
+- Slow parallax
+- Equipment subtly moving as the user scrolls
+- Typography entering with smooth animation
+- Image transitioning as the page scrolls
+
+Add a small scroll indicator:
+EXPLORE AMBROSS ↓
+
+
+2. CATEGORY EXPERIENCE
+
+Create a large editorial section titled:
+
+“EXPLORE OUR ENGINEERING WORLD”
+
+Instead of traditional small product cards, create large horizontal/vertical interactive category panels.
+
+The main categories are:
+
+01
+THEORY OF MACHINE LAB
+
+02
+FLUID MECHANICS LAB
+
+03
+HEAT TRANSFER LAB
+
+04
+THERMODYNAMICS LAB
+
+05
+STRUCTURAL MECHANICS LAB
+
+06
+ENGINEERING APPARATUS,
+MODELS & CHARTS
+
+07
+AUTOMOBILE ENGINEERING
+& I.C. ENGINE LAB
+
+Each category should have:
+- Large category number
+- Large typography
+- High-quality engineering equipment image
+- Short description
+- “Explore Lab →” CTA
+
+Interaction:
+When the cursor moves over a category:
+- Image expands
+- Background subtly changes
+- Category number animates
+- Text shifts slightly
+- Arrow moves
+- Image has subtle zoom/parallax
+
+Keep the interface clean and premium.
+
+
+3. FEATURED LAB EXPERIENCE
+
+Create a large immersive section for:
+
+“BUILT FOR
+REAL ENGINEERING.”
+
+Show a large engineering laboratory photograph/render.
+
+Overlay small technical labels around equipment, similar to an engineering schematic.
+
+Example labels:
+
+MECHANICAL SYSTEMS
+FLOW ANALYSIS
+THERMAL TRANSFER
+MATERIAL TESTING
+AUTOMOTIVE SYSTEMS
+
+Use thin technical lines connecting labels to the equipment.
+
+Keep the design elegant rather than overly futuristic.
+
+
+4. PRODUCT DISCOVERY SECTION
+
+Title:
+
+“FROM CONCEPT
+TO EXPERIMENT.”
+
+Create an interactive product discovery grid.
+
+Categories:
+
+LABORATORY EQUIPMENT
+ENGINEERING MODELS
+DEMONSTRATION APPARATUS
+WALL CHARTS
+TRAINING EQUIPMENT
+AUTOMOBILE LAB EQUIPMENT
+
+Each card should use a large product image and minimal text.
+
+On hover:
+Image zooms slightly.
+Product name slides upward.
+CTA appears.
+
+Use generous whitespace.
+
+
+5. ABOUT AMBROSS INDIA
+
+Create a clean editorial split-screen section.
+
+Left:
+Large heading:
+
+“ENGINEERING
+KNOWLEDGE,
+MADE TANGIBLE.”
+
+Right:
+Short company introduction.
+
+Example:
+
+“Ambross India develops laboratory equipment, engineering apparatus, educational models and training systems designed to make engineering concepts easier to understand, demonstrate and apply.”
+
+Include a CTA:
+ABOUT AMBROSS INDIA →
+
+
+6. ENGINEERING APPLICATIONS
+
+Create a horizontal scrolling section titled:
+
+“WHERE ENGINEERING
+COMES TO LIFE.”
+
+Show applications:
+
+MECHANICAL ENGINEERING
+AUTOMOBILE ENGINEERING
+CIVIL ENGINEERING
+THERMAL ENGINEERING
+FLUID MECHANICS
+ENGINEERING EDUCATION
+
+Use high-quality images of real laboratory environments.
+
+Each application should feel like a visual story rather than a normal service card.
+
+
+7. WHY AMBROSS
+
+Create a clean numbered section:
+
+01
+ENGINEERING PRECISION
+
+02
+EDUCATIONAL FOCUS
+
+03
+ROBUST CONSTRUCTION
+
+04
+PRACTICAL LEARNING
+
+05
+INSTITUTIONAL SUPPORT
+
+Use large numbers and minimal text.
+
+Visual style should resemble a premium engineering publication.
+
+
+8. PRODUCT / LAB DETAIL PAGE
+
+Design a reusable internal page template.
+
+Header:
+Large category title.
+
+Example:
+
+“FLUID
+MECHANICS
+LAB”
+
+Hero image showing laboratory apparatus.
+
+Below:
+
+ABOUT THE LAB
+
+KEY EXPERIMENTS
+
+EQUIPMENT
+
+TECHNICAL SPECIFICATIONS
+
+APPLICATIONS
+
+DOWNLOAD CATALOGUE
+
+REQUEST ENQUIRY
+
+Create product/equipment cards below.
+
+Each product should include:
+Product image
+Product name
+Model number
+Short description
+Key specifications
+VIEW DETAILS
+
+
+9. ENGINEERING EQUIPMENT SHOWCASE
+
+Create a visually rich section showing individual apparatus.
+
+Use large product photography against clean white/light grey backgrounds.
+
+Examples:
+
+Venturimeter
+Bernoulli's Apparatus
+Reynolds Apparatus
+Heat Exchanger
+Fourier's Law Apparatus
+Steam Turbine Model
+IC Engine Test Rig
+Automobile Cut Section Model
+Universal Testing Machine
+Beam Deflection Apparatus
+
+Make the equipment look premium and technically accurate.
+
+Avoid generic stock imagery wherever possible.
+
+
+10. CTA SECTION
+
+Create a bold final section:
+
+“BUILD A
+BETTER LAB.”
+
+Supporting text:
+
+“Explore laboratory equipment and engineering solutions designed for practical learning.”
+
+Buttons:
+
+VIEW PRODUCTS
+REQUEST ENQUIRY
+
+Use a large product/laboratory visual in the background.
+
+
+11. FOOTER
+
+Minimal premium footer.
+
+AMBROSS INDIA
+
+Laboratory Equipment
+Engineering Apparatus
+Educational Models
+
+Navigation:
+Products
+Labs
+About
+Applications
+Resources
+Contact
+
+Contact information
+Email
+Phone
+Address
+Social media
+
+Add:
+© Ambross India
+
+
+LAYOUT & INTERACTION:
+
+Desktop:
+1440px wide design.
+Use a 12-column grid.
+Generous whitespace.
+Large typography.
+Full-width imagery.
+Editorial layouts.
+
+Mobile:
+Create a responsive 390px mobile version.
+Use stacked category sections.
+Large touch-friendly navigation.
+Horizontal swipe galleries where appropriate.
+Keep animations subtle and performant.
+
+ANIMATION DIRECTION:
+
+Use:
+- Scroll-triggered reveals
+- Image parallax
+- Smooth category transitions
+- Horizontal scrolling sections
+- Typography masking
+- Image scale transitions
+- Hover image zoom
+- Number animations
+- Subtle cursor interaction
+
+Do NOT make animations distracting.
+
+The website should feel:
+“An engineering exhibition on the web.”
+
+DESIGN LANGUAGE:
+
+Think:
+Apple product presentation
++
+premium engineering catalogue
++
+modern architecture magazine
++
+interactive digital exhibition
+
+But maintain a distinctly Indian engineering/manufacturing identity.
+
+IMPORTANT DESIGN PRINCIPLE:
+
+This is NOT a traditional B2B engineering website.
+
+Do not create:
+- Generic hero slider
+- Typical Bootstrap cards
+- Crowded navigation
+- Huge paragraphs
+- Old-fashioned catalogue layout
+- Excessive icons
+- Generic stock photos
+
+Instead create an immersive visual journey where users discover Ambross India's laboratory categories through large imagery, typography and interaction.
+
+PRIMARY USER JOURNEY:
+
+HOME
+↓
+EXPLORE LABS
+↓
+SELECT ENGINEERING CATEGORY
+↓
+VIEW LAB
+↓
+EXPLORE EQUIPMENT
+↓
+VIEW TECHNICAL DETAILS
+↓
+REQUEST ENQUIRY
+
+Create the complete Figma design system including:
+- Desktop homepage
+- Mobile homepage
+- Category landing page
+- Lab detail page
+- Product detail page
+- Navigation states
+- Hover states
+- Buttons
+- Cards
+- Typography system
+- Color system
+- Responsive components
+- Scroll/interaction states
+
+Overall visual impression:
+LIGHT.
+PREMIUM.
+ENGINEERING.
+PRECISE.
+IMMERSIVE.
+MODERN.
+INDUSTRIAL.
+EDUCATIONAL.
+
+The final result should look like a next-generation engineering equipment website, not a conventional industrial catalogue.

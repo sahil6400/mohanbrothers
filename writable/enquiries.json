@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Prof. Sharma",
+        "email": "sharma@iit.ac.in",
+        "phone": "+91 9876543210",
+        "country": "India",
+        "category": "Fluid Mechanics Lab",
+        "message": "Inquiry for Bernoulli apparatus and Venturimeter",
+        "created_at": "2026-09-29 05:29:39",
+        "ip_address": "::1"
+    }
+]
