@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AMBROSS INDIA - ADMIN PORTAL STYLING
+   Ambros INDIA - ADMIN PORTAL STYLING
    ========================================================================== */
 
 :root {
@@ -479,7 +479,9 @@ body.admin-body {
   color: #CCCCCC;
 }
 
-.admin-input, .admin-select, .admin-textarea {
+.admin-input,
+.admin-select,
+.admin-textarea {
   background: #202020;
   color: #FFFFFF;
   font-family: 'Inter', sans-serif;
@@ -491,7 +493,9 @@ body.admin-body {
   transition: all 0.2s;
 }
 
-.admin-input:focus, .admin-select:focus, .admin-textarea:focus {
+.admin-input:focus,
+.admin-select:focus,
+.admin-textarea:focus {
   border-color: var(--admin-red);
   box-shadow: 0 0 0 3px rgba(204, 34, 34, 0.2);
 }
@@ -547,7 +551,8 @@ body.admin-body {
   gap: 8px;
 }
 
-.admin-dropzone:hover, .admin-dropzone.dragover {
+.admin-dropzone:hover,
+.admin-dropzone.dragover {
   border-color: var(--admin-red);
   background: rgba(204, 34, 34, 0.05);
 }

@@ -20,7 +20,7 @@ class Product extends BaseController
     {
         $product = $this->productModel->getProduct($slug);
 
-        if (! $product) {
+        if (!$product) {
             $product = $this->productModel->getProduct('static-dynamic-balancing-apparatus');
         }
 
@@ -32,11 +32,11 @@ class Product extends BaseController
         $allCategories = $this->categoryModel->getAllCategories();
 
         $data = [
-            'title'            => $product['name'] . ' | ' . ($product['category_name'] ?? 'Engineering Lab Equipment') . ' | Ambross India',
+            'title' => $product['name'] . ' | ' . ($product['category_name'] ?? 'Engineering Lab Equipment') . ' | Ambros India',
             'meta_description' => substr($product['overview'], 0, 160) . '...',
-            'product'          => $product,
-            'category'         => $category,
-            'all_categories'   => $allCategories,
+            'product' => $product,
+            'category' => $category,
+            'all_categories' => $allCategories,
         ];
 
         return view('product/view', $data);

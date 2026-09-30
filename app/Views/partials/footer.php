@@ -2,12 +2,12 @@
     <div class="container-custom">
         <!-- Top Section: 2 Columns (Links on left, Genesis Video on right) -->
         <div class="footer-top-grid">
-            
+
             <!-- Left: Brand Info & Multi-column Links -->
             <div class="footer-nav-columns">
                 <!-- Brand Summary -->
                 <div>
-                    <img src="<?= base_url('assets/images/logo.png') ?>" alt="Mohan Brothers — Ambross India" style="height: 44px; width: auto; object-fit: contain; filter: brightness(0) invert(1); margin-bottom: 20px;">
+                    <img src="<?= base_url('assets/images/logo.png') ?>" alt="Mohan Brothers — Ambros India" class="footer-logo-img">
                     <p class="footer-brand-desc">
                         Laboratory Equipment<br>
                         Engineering Apparatus<br>
@@ -33,7 +33,7 @@
                     <h4 class="footer-col-title">Contact</h4>
                     <div class="footer-contact-item">
                         <span class="footer-contact-icon">&#9993;</span>
-                        <span class="footer-contact-text">info@ambrossindia.com</span>
+                        <span class="footer-contact-text">info@Ambrosindia.com</span>
                     </div>
                     <div class="footer-contact-item">
                         <span class="footer-contact-icon">&#9742;</span>
@@ -50,13 +50,11 @@
             <div>
                 <h4 class="footer-col-title">Genesis</h4>
                 <div class="genesis-video-wrapper">
-                    <iframe
-                        class="genesis-video-iframe"
+                    <iframe class="genesis-video-iframe"
                         src="https://www.youtube.com/embed/pd_qpaRNPqE?rel=0&modestbranding=1&color=white"
-                        title="Genesis — Ambross India"
+                        title="Genesis — Ambros India"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        loading="lazy">
+                        allowfullscreen loading="lazy">
                     </iframe>
                 </div>
             </div>
@@ -64,7 +62,7 @@
 
         <!-- Bottom Bar -->
         <div class="footer-bottom-bar">
-            <p class="footer-copyright">&copy; <?= date('Y') ?> Ambross India & Mohan Brothers. All rights reserved.</p>
+            <p class="footer-copyright">&copy; <?= date('Y') ?> Ambros India & Mohan Brothers. All rights reserved.</p>
             <div class="footer-legal-links">
                 <a href="#" class="footer-legal-link">Privacy Policy</a>
                 <a href="#" class="footer-legal-link">Terms of Use</a>

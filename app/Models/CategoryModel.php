@@ -11,7 +11,7 @@ class CategoryModel
             'title' => 'Theory of Machine Lab',
             'subtitle' => 'Kinematics, Dynamics, Balancing, Cams, Gyroscopic Precession & Vibration Analysis',
             'hero_img' => 'https://images.unsplash.com/photo-1581093803931-46e730e7622e?w=1600&h=800&fit=crop&auto=format',
-            'desc' => 'Theory of Machine Lab deals with the study of relative motion between the various parts of a machine, and the forces acting upon them. The main objective of this laboratory is to impart practical knowledge on the design, kinematics, and dynamic analysis of mechanisms for specified machine motions. Ambross India manufactures and exports a comprehensive range of precision educational apparatus calibrated for university curricula across India and worldwide.',
+            'desc' => 'Theory of Machine Lab deals with the study of relative motion between the various parts of a machine, and the forces acting upon them. The main objective of this laboratory is to impart practical knowledge on the design, kinematics, and dynamic analysis of mechanisms for specified machine motions. Ambros India manufactures and exports a comprehensive range of precision educational apparatus calibrated for university curricula across India and worldwide.',
             'learning_outcomes' => [
                 'Analyze planar mechanisms, degrees of freedom, and kinematic inversions.',
                 'Perform static and dynamic multi-plane balancing of rotating masses.',
@@ -197,7 +197,7 @@ class CategoryModel
             'title' => 'Refrigeration & Air Conditioning Lab',
             'subtitle' => 'Vapor Compression, Air Conditioning Tutors, Heat Pumps, Psychrometry & Cascade Systems',
             'hero_img' => 'assets/images/refrigeration-lab.jpg',
-            'desc' => 'Refrigeration systems refer to the different physical components that make up the total refrigeration unit. The different stages in the refrigeration cycle are undergone in these physical systems. Ambross India manufactures complete teaching laboratories covering Vapor Compression Test Rigs, Air Conditioning Tutors, Domestic Refrigerator Cut-sections, Ice Plant Trainers, and Heat Pump Demonstration units calibrated with digital pressure transducers and energy meters.',
+            'desc' => 'Refrigeration systems refer to the different physical components that make up the total refrigeration unit. The different stages in the refrigeration cycle are undergone in these physical systems. Ambros India manufactures complete teaching laboratories covering Vapor Compression Test Rigs, Air Conditioning Tutors, Domestic Refrigerator Cut-sections, Ice Plant Trainers, and Heat Pump Demonstration units calibrated with digital pressure transducers and energy meters.',
             'learning_outcomes' => [
                 'Quantify Coefficient of Performance (COP) of Vapor Compression Refrigeration systems.',
                 'Plot pressure-enthalpy (P-h) and temperature-entropy (T-s) cycles under varying expansion devices.',

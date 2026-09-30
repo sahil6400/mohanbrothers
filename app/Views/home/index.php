@@ -11,8 +11,8 @@
 
     <!-- Left Column: Typography & CTAs -->
     <div class="hero-content">
-        <span class="hero-badge">Ambross India &bull; Mohan Brothers</span>
-        
+        <span class="hero-badge">Ambros India &bull; Mohan Brothers</span>
+
         <h1 class="hero-title">
             ENGINEERING<br>
             <span class="highlight">THE WAY</span><br>
@@ -20,7 +20,8 @@
         </h1>
 
         <p class="hero-desc">
-            Laboratory equipment, engineering apparatus and educational models crafted for precision, durability, and practical hands-on discovery.
+            Laboratory equipment, engineering apparatus and educational models crafted for precision, durability, and
+            practical hands-on discovery.
         </p>
 
         <div class="hero-cta-group">
@@ -40,9 +41,10 @@
         <div class="hero-vignette-bottom"></div>
         <div class="hero-vignette-top"></div>
 
-        <video class="hero-video" autoplay loop muted playsinline poster="<?= base_url('assets/images/engine-ref.png') ?>">
+        <video class="hero-video" autoplay loop muted playsinline
+            poster="<?= base_url('assets/images/engine-ref.png') ?>">
             <source src="<?= base_url('assets/videos/hero-bg.mp4') ?>" type="video/mp4">
-            <img src="<?= base_url('assets/images/engine-ref.png') ?>" alt="Ambross Engineering Engine Cut-Section">
+            <img src="<?= base_url('assets/images/engine-ref.png') ?>" alt="Ambros Engineering Engine Cut-Section">
         </video>
 
         <!-- Dynamic Live Engine Status Badge -->
@@ -75,10 +77,9 @@
             <?php foreach ($labs as $i => $lab): ?>
                 <div class="fade-up" data-delay="<?= $i * 50 ?>">
                     <a href="<?= base_url('category/' . esc($lab['slug'])) ?>" class="lab-row-item">
-                        <span class="lab-row-num"><?= esc($lab['num']) ?></span>
-                        
                         <div class="lab-row-thumb">
-                            <img src="<?= esc($lab['img']) ?>" alt="<?= esc(str_replace("\n", ' ', $lab['title'])) ?>" loading="lazy">
+                            <img src="<?= esc($lab['img']) ?>" alt="<?= esc(str_replace("\n", ' ', $lab['title'])) ?>"
+                                loading="lazy">
                         </div>
 
                         <div class="lab-row-info">
@@ -102,7 +103,7 @@
 <section class="featured-experience-wrapper">
     <div class="featured-experience-bg">
         <div class="featured-gradient-overlay"></div>
-        
+
         <div class="featured-inner-content fade-up">
             <p class="featured-tag">BUILT FOR THE REAL WORLD</p>
             <h2 class="featured-title">
@@ -113,7 +114,7 @@
 
             <!-- Schematic Diagram Indicators -->
             <div class="schematic-callouts">
-                <?php 
+                <?php
                 $schematics = [
                     'MECHANICAL SYSTEMS',
                     'FLOW ANALYSIS',
@@ -150,7 +151,8 @@
             <?php foreach ($products as $i => $product): ?>
                 <div class="fade-up" data-delay="<?= $i * 75 ?>">
                     <a href="#contact" class="product-card">
-                        <img src="<?= esc($product['img']) ?>" alt="<?= esc(str_replace("\n", ' ', $product['name'])) ?>" loading="lazy">
+                        <img src="<?= esc($product['img']) ?>" alt="<?= esc(str_replace("\n", ' ', $product['name'])) ?>"
+                            loading="lazy">
                         <div class="product-overlay"></div>
                         <div class="product-info-box">
                             <h3 class="product-title"><?= nl2br(esc($product['name'])) ?></h3>
@@ -165,7 +167,7 @@
 
 
 <!-- =========================================================================
-     5. ABOUT AMBROSS INDIA
+     5. ABOUT Ambros INDIA
      ========================================================================= -->
 <section class="section-padding about-section" id="about">
     <div class="container-custom">
@@ -181,12 +183,16 @@
 
             <div class="fade-up" data-delay="150">
                 <p class="about-lead-text">
-                    Ambross India (Mohan Brothers) develops laboratory equipment, engineering apparatus, educational models, and training systems designed to make complex engineering concepts easier to understand, demonstrate, and master.
+                    Ambros India (Mohan Brothers) develops laboratory equipment, engineering apparatus, educational
+                    models, and training systems designed to make complex engineering concepts easier to understand,
+                    demonstrate, and master.
                 </p>
                 <p class="about-sub-text">
-                    Trusted by premier technical universities, engineering colleges, polytechnics, and industrial vocational centres across India and abroad. Every instrument is rigorously calibrated, built from industrial-grade components, and architected around the curriculum.
+                    Trusted by premier technical universities, engineering colleges, polytechnics, and industrial
+                    vocational centres across India and abroad. Every instrument is rigorously calibrated, built from
+                    industrial-grade components, and architected around the curriculum.
                 </p>
-                <a href="#contact" class="about-link">ABOUT AMBROSS INDIA &rarr;</a>
+                <a href="#contact" class="about-link">ABOUT Ambros INDIA &rarr;</a>
             </div>
         </div>
     </div>
@@ -223,13 +229,13 @@
 
 
 <!-- =========================================================================
-     7. WHY AMBROSS (DIFFERENCE)
+     7. WHY Ambros (DIFFERENCE)
      ========================================================================= -->
 <section class="section-padding why-section">
     <div class="container-custom">
         <div class="fade-up" style="margin-bottom: 50px;">
-            <p class="section-tag">THE AMBROSS DIFFERENCE</p>
-            <h2 class="section-heading">WHY AMBROSS.</h2>
+            <p class="section-tag">THE Ambros DIFFERENCE</p>
+            <h2 class="section-heading">WHY Ambros.</h2>
         </div>
 
         <div class="why-grid">
@@ -254,9 +260,9 @@
     <div class="contact-cta-wrapper">
         <div class="contact-cta-bg">
             <div class="contact-cta-overlay"></div>
-            
+
             <div class="contact-cta-grid">
-                
+
                 <!-- Left: Headline & Context -->
                 <div class="fade-up">
                     <p class="contact-tag">GET IN TOUCH</p>
@@ -266,7 +272,8 @@
                         LAB.
                     </h2>
                     <p class="contact-subtext">
-                        Equip your institution with industry-grade engineering setups. Contact our academic solutions team for catalogues, specifications, and lab planning.
+                        Equip your institution with industry-grade engineering setups. Contact our academic solutions
+                        team for catalogues, specifications, and lab planning.
                     </p>
                     <a href="#products" class="btn-primary">VIEW PRODUCTS</a>
                 </div>
@@ -274,12 +281,13 @@
                 <!-- Right: Interactive CodeIgniter Form -->
                 <div class="fade-up" data-delay="150">
                     <div class="enquiry-form-card">
-                        
+
                         <!-- Dynamic Success Message Alert -->
                         <div class="form-success-alert" id="enquirySuccessAlert">
                             <div class="form-success-icon">&#10003;</div>
                             <h4 class="form-success-title">Enquiry Received</h4>
-                            <p class="form-success-msg">Thank you for reaching out. Our engineering representative will contact you within 24 hours.</p>
+                            <p class="form-success-msg">Thank you for reaching out. Our engineering representative will
+                                contact you within 24 hours.</p>
                         </div>
 
                         <!-- Enquiry Form with CSRF -->
@@ -289,18 +297,21 @@
                             <div class="form-grid-2">
                                 <div class="form-group">
                                     <label class="form-label" for="name">NAME *</label>
-                                    <input type="text" id="name" name="name" class="form-control" placeholder="Your full name" required>
+                                    <input type="text" id="name" name="name" class="form-control"
+                                        placeholder="Your full name" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label" for="email">EMAIL *</label>
-                                    <input type="email" id="email" name="email" class="form-control" placeholder="you@institution.edu" required>
+                                    <input type="email" id="email" name="email" class="form-control"
+                                        placeholder="you@institution.edu" required>
                                 </div>
                             </div>
 
                             <div class="form-grid-2">
                                 <div class="form-group">
                                     <label class="form-label" for="phone">CONTACT NUMBER</label>
-                                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 00000 00000">
+                                    <input type="tel" id="phone" name="phone" class="form-control"
+                                        placeholder="+91 00000 00000">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label" for="country">COUNTRY</label>
@@ -325,7 +336,8 @@
 
                             <div class="form-group">
                                 <label class="form-label" for="message">MESSAGE</label>
-                                <textarea id="message" name="message" class="form-control" placeholder="Tell us about your requirements or lab setup plans..."></textarea>
+                                <textarea id="message" name="message" class="form-control"
+                                    placeholder="Tell us about your requirements or lab setup plans..."></textarea>
                             </div>
 
                             <button type="submit" class="form-submit-btn" id="enquirySubmitBtn">

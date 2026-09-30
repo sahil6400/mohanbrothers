@@ -1,9 +1,57 @@
 /**
- * Ambross India - Main Interactive Frontend Script
+ * Ambros India - Main Interactive Frontend Script
  * CodeIgniter 4 Integrated Frontend
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Dark / Light Theme Toggle Engine
+  const themeToggleBtn = document.getElementById('themeToggleBtn');
+  const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+
+  const updateMobileThemeText = (theme) => {
+    if (!mobileThemeToggle) return;
+    if (theme === 'light') {
+      mobileThemeToggle.innerHTML = `
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+        </svg>
+        <span>Dark Theme</span>
+      `;
+    } else {
+      mobileThemeToggle.innerHTML = `
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2"></path>
+          <path d="M12 20v2"></path>
+          <path d="m4.93 4.93 1.41 1.41"></path>
+          <path d="m17.66 17.66 1.41 1.41"></path>
+          <path d="M2 12h2"></path>
+          <path d="M20 12h2"></path>
+        </svg>
+        <span>Light Theme</span>
+      `;
+    }
+  };
+
+  const applyTheme = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('Ambros_theme', theme);
+    localStorage.setItem('ambross_theme', theme);
+    updateMobileThemeText(theme);
+  };
+
+  const currentTheme = document.documentElement.getAttribute('data-theme') || localStorage.getItem('Ambros_theme') || localStorage.getItem('ambross_theme') || 'light';
+  applyTheme(currentTheme);
+
+  const handleToggle = () => {
+    const activeTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const nextTheme = activeTheme === 'dark' ? 'light' : 'dark';
+    applyTheme(nextTheme);
+  };
+
+  themeToggleBtn?.addEventListener('click', handleToggle);
+  mobileThemeToggle?.addEventListener('click', handleToggle);
+
   // 1. Sticky Navigation Scroll Effect
   const siteHeader = document.querySelector('.site-header');
   const handleScroll = () => {
@@ -192,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (enquiryForm) {
     enquiryForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
+
       const originalBtnText = submitBtn.innerHTML;
       submitBtn.disabled = true;
       submitBtn.innerHTML = `<span class="spinner"></span> SUBMITTING...`;
@@ -293,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Smooth scroll for all anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
       if (targetId === '#' || !targetId) return;
       const targetElement = document.querySelector(targetId);

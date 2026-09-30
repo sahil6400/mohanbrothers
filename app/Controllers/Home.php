@@ -7,9 +7,9 @@ class Home extends BaseController
     public function index(): string
     {
         $data = [
-            'title' => 'Mohan Brothers — Ambross India | Laboratory Equipment & Educational Models',
-            'meta_description' => 'Precision engineering laboratory equipment, fluid mechanics, heat transfer, thermodynamics, and automobile lab systems by Ambross India / Mohan Brothers.',
-            
+            'title' => 'Mohan Brothers — Ambros India | Laboratory Equipment & Educational Models',
+            'meta_description' => 'Precision engineering laboratory equipment, fluid mechanics, heat transfer, thermodynamics, and automobile lab systems by Ambros India / Mohan Brothers.',
+
             'labs' => [
                 [
                     'slug' => 'theory-of-machine-lab',
@@ -106,8 +106,17 @@ class Home extends BaseController
             ],
 
             'countries' => [
-                'India', 'United States', 'United Kingdom', 'UAE', 'Saudi Arabia',
-                'Singapore', 'Malaysia', 'Bangladesh', 'Nepal', 'Sri Lanka', 'Other',
+                'India',
+                'United States',
+                'United Kingdom',
+                'UAE',
+                'Saudi Arabia',
+                'Singapore',
+                'Malaysia',
+                'Bangladesh',
+                'Nepal',
+                'Sri Lanka',
+                'Other',
             ],
         ];
 

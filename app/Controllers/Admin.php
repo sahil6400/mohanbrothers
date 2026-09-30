@@ -21,7 +21,7 @@ class Admin extends BaseController
 
     private function checkAuth()
     {
-        if (! $this->session->get('is_admin_logged_in')) {
+        if (!$this->session->get('is_admin_logged_in')) {
             return redirect()->to('/admin/login')->with('error', 'Please login to access the admin portal.');
         }
         return null;
@@ -42,7 +42,7 @@ class Admin extends BaseController
         }
 
         return view('admin/login', [
-            'title' => 'Admin Login | Ambross India Control Panel'
+            'title' => 'Admin Login | Ambros India Control Panel'
         ]);
     }
 
@@ -51,13 +51,13 @@ class Admin extends BaseController
         $username = trim($this->request->getPost('username') ?? '');
         $password = trim($this->request->getPost('password') ?? '');
 
-        // Support default admin login: admin / admin123 or admin@ambross.com / admin123
-        if (($username === 'admin' || $username === 'admin@ambross.com') && $password === 'admin123') {
+        // Support default admin login: admin / admin123 or admin@Ambros.com / admin123
+        if (($username === 'admin' || $username === 'admin@Ambros.com') && $password === 'admin123') {
             $this->session->set([
                 'is_admin_logged_in' => true,
-                'admin_user'         => 'Ambross Administrator',
-                'admin_email'        => 'admin@ambross.com',
-                'logged_in_time'     => date('Y-m-d H:i:s')
+                'admin_user' => 'Ambros Administrator',
+                'admin_email' => 'admin@ambros.com',
+                'logged_in_time' => date('Y-m-d H:i:s')
             ]);
 
             return redirect()->to('/admin/dashboard')->with('success', 'Welcome back, Administrator!');
@@ -74,7 +74,8 @@ class Admin extends BaseController
 
     public function dashboard()
     {
-        if ($redirect = $this->checkAuth()) return $redirect;
+        if ($redirect = $this->checkAuth())
+            return $redirect;
 
         $categories = $this->categoryModel->getAllCategories();
         $products = $this->productModel->getAllProducts();
@@ -88,14 +89,14 @@ class Admin extends BaseController
         }
 
         return view('admin/dashboard', [
-            'title'              => 'Dashboard | Ambross Admin Panel',
-            'categories_count'   => count($categories),
-            'products_count'     => count($products),
-            'enquiries_count'    => count($enquiries),
-            'new_enquiries_count'=> $newEnquiriesCount,
-            'recent_enquiries'   => array_slice(array_reverse($enquiries), 0, 5),
-            'recent_products'    => array_slice($products, 0, 5),
-            'active_tab'         => 'dashboard'
+            'title' => 'Dashboard | Ambros Admin Panel',
+            'categories_count' => count($categories),
+            'products_count' => count($products),
+            'enquiries_count' => count($enquiries),
+            'new_enquiries_count' => $newEnquiriesCount,
+            'recent_enquiries' => array_slice(array_reverse($enquiries), 0, 5),
+            'recent_products' => array_slice($products, 0, 5),
+            'active_tab' => 'dashboard'
         ]);
     }
 
@@ -104,12 +105,13 @@ class Admin extends BaseController
      * ------------------------------------------------------------- */
     public function categories()
     {
-        if ($redirect = $this->checkAuth()) return $redirect;
+        if ($redirect = $this->checkAuth())
+            return $redirect;
 
         $categories = $this->categoryModel->getAllCategories();
 
         return view('admin/categories/index', [
-            'title'      => 'Lab Categories Management | Ambross Admin',
+            'title' => 'Lab Categories Management | Ambros Admin',
             'categories' => $categories,
             'active_tab' => 'categories'
         ]);
@@ -117,11 +119,12 @@ class Admin extends BaseController
 
     public function createCategory()
     {
-        if ($redirect = $this->checkAuth()) return $redirect;
+        if ($redirect = $this->checkAuth())
+            return $redirect;
 
         return view('admin/categories/form', [
-            'title'      => 'Add New Laboratory Category | Ambross Admin',
-            'category'   => null,
+            'title' => 'Add New Laboratory Category | Ambros Admin',
+            'category' => null,
             'action_url' => base_url('admin/categories/store'),
             'active_tab' => 'categories'
         ]);
@@ -129,7 +132,8 @@ class Admin extends BaseController
 
     public function storeCategory()
     {
-        if ($redirect = $this->checkAuth()) return $redirect;
+        if ($redirect = $this->checkAuth())
+            return $redirect;
 
         $title = $this->request->getPost('title');
         $slug = $this->request->getPost('slug') ?: url_title(strtolower($title), '-', true);
@@ -140,10 +144,10 @@ class Admin extends BaseController
         // Image handling (upload or URL/path fallback)
         $heroImg = $this->request->getPost('hero_img') ?: 'assets/images/refrigeration-lab.jpg';
         $uploadedFile = $this->request->getFile('hero_img_file');
-        if ($uploadedFile && $uploadedFile->isValid() && ! $uploadedFile->hasMoved()) {
+        if ($uploadedFile && $uploadedFile->isValid() && !$uploadedFile->hasMoved()) {
             $newName = $uploadedFile->getRandomName();
             $targetDir = FCPATH . 'uploads/categories';
-            if (! is_dir($targetDir)) {
+            if (!is_dir($targetDir)) {
                 mkdir($targetDir, 0777, true);
             }
             $uploadedFile->move($targetDir, $newName);
@@ -151,12 +155,12 @@ class Admin extends BaseController
         }
 
         $data = [
-            'slug'              => $slug,
-            'num'               => $this->request->getPost('num') ?: '00',
-            'title'             => $title,
-            'subtitle'          => $this->request->getPost('subtitle'),
-            'hero_img'          => $heroImg,
-            'desc'              => $this->request->getPost('desc'),
+            'slug' => $slug,
+            'num' => $this->request->getPost('num') ?: '00',
+            'title' => $title,
+            'subtitle' => $this->request->getPost('subtitle'),
+            'hero_img' => $heroImg,
+            'desc' => $this->request->getPost('desc'),
             'learning_outcomes' => $outcomes,
         ];
 
@@ -166,16 +170,17 @@ class Admin extends BaseController
 
     public function editCategory(string $slug)
     {
-        if ($redirect = $this->checkAuth()) return $redirect;
+        if ($redirect = $this->checkAuth())
+            return $redirect;
 
         $category = $this->categoryModel->getCategory($slug);
-        if (! $category) {
+        if (!$category) {
             return redirect()->to('/admin/categories')->with('error', 'Category not found.');
         }
 
         return view('admin/categories/form', [
-            'title'      => 'Edit Category: ' . $category['title'],
-            'category'   => $category,
+            'title' => 'Edit Category: ' . $category['title'],
+            'category' => $category,
             'action_url' => base_url('admin/categories/update/' . $slug),
             'active_tab' => 'categories'
         ]);
@@ -183,10 +188,11 @@ class Admin extends BaseController
 
     public function updateCategory(string $slug)
     {
-        if ($redirect = $this->checkAuth()) return $redirect;
+        if ($redirect = $this->checkAuth())
+            return $redirect;
 
         $category = $this->categoryModel->getCategory($slug);
-        if (! $category) {
+        if (!$category) {
             return redirect()->to('/admin/categories')->with('error', 'Category not found.');
         }
 
@@ -197,10 +203,10 @@ class Admin extends BaseController
         // Image handling (upload or existing/URL fallback)
         $heroImg = $this->request->getPost('hero_img') ?: ($category['hero_img'] ?? 'assets/images/refrigeration-lab.jpg');
         $uploadedFile = $this->request->getFile('hero_img_file');
-        if ($uploadedFile && $uploadedFile->isValid() && ! $uploadedFile->hasMoved()) {
+        if ($uploadedFile && $uploadedFile->isValid() && !$uploadedFile->hasMoved()) {
             $newName = $uploadedFile->getRandomName();
             $targetDir = FCPATH . 'uploads/categories';
-            if (! is_dir($targetDir)) {
+            if (!is_dir($targetDir)) {
                 mkdir($targetDir, 0777, true);
             }
             $uploadedFile->move($targetDir, $newName);
@@ -208,12 +214,12 @@ class Admin extends BaseController
         }
 
         $data = [
-            'slug'              => $slug,
-            'num'               => $this->request->getPost('num'),
-            'title'             => $title,
-            'subtitle'          => $this->request->getPost('subtitle'),
-            'hero_img'          => $heroImg,
-            'desc'              => $this->request->getPost('desc'),
+            'slug' => $slug,
+            'num' => $this->request->getPost('num'),
+            'title' => $title,
+            'subtitle' => $this->request->getPost('subtitle'),
+            'hero_img' => $heroImg,
+            'desc' => $this->request->getPost('desc'),
             'learning_outcomes' => $outcomes,
         ];
 
@@ -223,7 +229,8 @@ class Admin extends BaseController
 
     public function deleteCategory(string $slug)
     {
-        if ($redirect = $this->checkAuth()) return $redirect;
+        if ($redirect = $this->checkAuth())
+            return $redirect;
 
         $this->categoryModel->deleteCategory($slug);
         return redirect()->to('/admin/categories')->with('success', 'Category removed successfully.');
@@ -234,14 +241,15 @@ class Admin extends BaseController
      * ------------------------------------------------------------- */
     public function products()
     {
-        if ($redirect = $this->checkAuth()) return $redirect;
+        if ($redirect = $this->checkAuth())
+            return $redirect;
 
         $products = $this->productModel->getAllProducts();
         $categories = $this->categoryModel->getAllCategories();
 
         return view('admin/products/index', [
-            'title'      => 'Apparatus & Products Management | Ambross Admin',
-            'products'   => $products,
+            'title' => 'Apparatus & Products Management | Ambros Admin',
+            'products' => $products,
             'categories' => $categories,
             'active_tab' => 'products'
         ]);
@@ -249,13 +257,14 @@ class Admin extends BaseController
 
     public function createProduct()
     {
-        if ($redirect = $this->checkAuth()) return $redirect;
+        if ($redirect = $this->checkAuth())
+            return $redirect;
 
         $categories = $this->categoryModel->getAllCategories();
 
         return view('admin/products/form', [
-            'title'      => 'Add New Product / Test Rig | Ambross Admin',
-            'product'    => null,
+            'title' => 'Add New Product / Test Rig | Ambros Admin',
+            'product' => null,
             'categories' => $categories,
             'action_url' => base_url('admin/products/store'),
             'active_tab' => 'products'
@@ -264,7 +273,8 @@ class Admin extends BaseController
 
     public function storeProduct()
     {
-        if ($redirect = $this->checkAuth()) return $redirect;
+        if ($redirect = $this->checkAuth())
+            return $redirect;
 
         $name = $this->request->getPost('name');
         $slug = $this->request->getPost('slug') ?: url_title(strtolower($name), '-', true);
@@ -282,7 +292,7 @@ class Admin extends BaseController
                 [$k, $v] = explode(':', $line, 2);
                 $specifications[trim($k)] = trim($v);
             } elseif (trim($line)) {
-                $specifications['Spec ' . (count($specifications)+1)] = trim($line);
+                $specifications['Spec ' . (count($specifications) + 1)] = trim($line);
             }
         }
 
@@ -294,17 +304,17 @@ class Admin extends BaseController
                 [$k, $v] = explode(':', $line, 2);
                 $utilities[trim($k)] = trim($v);
             } elseif (trim($line)) {
-                $utilities['Utility ' . (count($utilities)+1)] = trim($line);
+                $utilities['Utility ' . (count($utilities) + 1)] = trim($line);
             }
         }
 
         // Image handling (upload or URL/path fallback)
         $img = $this->request->getPost('img') ?: 'assets/images/static-dynamic-balancing.jpg';
         $uploadedFile = $this->request->getFile('img_file');
-        if ($uploadedFile && $uploadedFile->isValid() && ! $uploadedFile->hasMoved()) {
+        if ($uploadedFile && $uploadedFile->isValid() && !$uploadedFile->hasMoved()) {
             $newName = $uploadedFile->getRandomName();
             $targetDir = FCPATH . 'uploads/products';
-            if (! is_dir($targetDir)) {
+            if (!is_dir($targetDir)) {
                 mkdir($targetDir, 0777, true);
             }
             $uploadedFile->move($targetDir, $newName);
@@ -312,17 +322,17 @@ class Admin extends BaseController
         }
 
         $data = [
-            'slug'          => $slug,
-            'code'          => $this->request->getPost('code') ?: '1100',
-            'name'          => $name,
+            'slug' => $slug,
+            'code' => $this->request->getPost('code') ?: '1100',
+            'name' => $name,
             'category_slug' => $catSlug,
             'category_name' => $category['title'] ?? 'Engineering Lab',
-            'img'           => $img,
-            'badge'         => $this->request->getPost('badge') ?: 'ISO 9001:2015 Precision Calibrated',
-            'overview'      => $this->request->getPost('overview'),
-            'experiments'   => $experiments,
-            'utilities'     => $utilities,
-            'specifications'=> $specifications,
+            'img' => $img,
+            'badge' => $this->request->getPost('badge') ?: 'ISO 9001:2015 Precision Calibrated',
+            'overview' => $this->request->getPost('overview'),
+            'experiments' => $experiments,
+            'utilities' => $utilities,
+            'specifications' => $specifications,
         ];
 
         $this->productModel->saveProduct($data);
@@ -331,18 +341,19 @@ class Admin extends BaseController
 
     public function editProduct(string $slug)
     {
-        if ($redirect = $this->checkAuth()) return $redirect;
+        if ($redirect = $this->checkAuth())
+            return $redirect;
 
         $product = $this->productModel->getProduct($slug);
-        if (! $product) {
+        if (!$product) {
             return redirect()->to('/admin/products')->with('error', 'Product not found.');
         }
 
         $categories = $this->categoryModel->getAllCategories();
 
         return view('admin/products/form', [
-            'title'      => 'Edit Product: ' . $product['name'],
-            'product'    => $product,
+            'title' => 'Edit Product: ' . $product['name'],
+            'product' => $product,
             'categories' => $categories,
             'action_url' => base_url('admin/products/update/' . $slug),
             'active_tab' => 'products'
@@ -351,10 +362,11 @@ class Admin extends BaseController
 
     public function updateProduct(string $slug)
     {
-        if ($redirect = $this->checkAuth()) return $redirect;
+        if ($redirect = $this->checkAuth())
+            return $redirect;
 
         $product = $this->productModel->getProduct($slug);
-        if (! $product) {
+        if (!$product) {
             return redirect()->to('/admin/products')->with('error', 'Product not found.');
         }
 
@@ -372,7 +384,7 @@ class Admin extends BaseController
                 [$k, $v] = explode(':', $line, 2);
                 $specifications[trim($k)] = trim($v);
             } elseif (trim($line)) {
-                $specifications['Spec ' . (count($specifications)+1)] = trim($line);
+                $specifications['Spec ' . (count($specifications) + 1)] = trim($line);
             }
         }
 
@@ -383,17 +395,17 @@ class Admin extends BaseController
                 [$k, $v] = explode(':', $line, 2);
                 $utilities[trim($k)] = trim($v);
             } elseif (trim($line)) {
-                $utilities['Utility ' . (count($utilities)+1)] = trim($line);
+                $utilities['Utility ' . (count($utilities) + 1)] = trim($line);
             }
         }
 
         // Image handling (upload or existing/URL fallback)
         $img = $this->request->getPost('img') ?: ($product['img'] ?? 'assets/images/static-dynamic-balancing.jpg');
         $uploadedFile = $this->request->getFile('img_file');
-        if ($uploadedFile && $uploadedFile->isValid() && ! $uploadedFile->hasMoved()) {
+        if ($uploadedFile && $uploadedFile->isValid() && !$uploadedFile->hasMoved()) {
             $newName = $uploadedFile->getRandomName();
             $targetDir = FCPATH . 'uploads/products';
-            if (! is_dir($targetDir)) {
+            if (!is_dir($targetDir)) {
                 mkdir($targetDir, 0777, true);
             }
             $uploadedFile->move($targetDir, $newName);
@@ -401,17 +413,17 @@ class Admin extends BaseController
         }
 
         $data = [
-            'slug'          => $slug,
-            'code'          => $this->request->getPost('code'),
-            'name'          => $name,
+            'slug' => $slug,
+            'code' => $this->request->getPost('code'),
+            'name' => $name,
             'category_slug' => $catSlug,
             'category_name' => $category['title'] ?? 'Engineering Lab',
-            'img'           => $img,
-            'badge'         => $this->request->getPost('badge'),
-            'overview'      => $this->request->getPost('overview'),
-            'experiments'   => $experiments,
-            'utilities'     => $utilities,
-            'specifications'=> $specifications,
+            'img' => $img,
+            'badge' => $this->request->getPost('badge'),
+            'overview' => $this->request->getPost('overview'),
+            'experiments' => $experiments,
+            'utilities' => $utilities,
+            'specifications' => $specifications,
         ];
 
         $this->productModel->saveProduct($data);
@@ -420,7 +432,8 @@ class Admin extends BaseController
 
     public function deleteProduct(string $slug)
     {
-        if ($redirect = $this->checkAuth()) return $redirect;
+        if ($redirect = $this->checkAuth())
+            return $redirect;
 
         $this->productModel->deleteProduct($slug);
         return redirect()->to('/admin/products')->with('success', 'Product removed successfully.');
@@ -431,28 +444,30 @@ class Admin extends BaseController
      * ------------------------------------------------------------- */
     public function enquiries()
     {
-        if ($redirect = $this->checkAuth()) return $redirect;
+        if ($redirect = $this->checkAuth())
+            return $redirect;
 
         $enquiries = $this->loadEnquiries();
         $statusFilter = $this->request->getGet('status');
 
         if ($statusFilter && $statusFilter !== 'all') {
-            $enquiries = array_filter($enquiries, function($e) use ($statusFilter) {
+            $enquiries = array_filter($enquiries, function ($e) use ($statusFilter) {
                 return ($e['status'] ?? 'new') === $statusFilter;
             });
         }
 
         return view('admin/enquiries/index', [
-            'title'         => 'Enquiry & Quotation Management | Ambross Admin',
-            'enquiries'     => array_reverse($enquiries),
-            'current_filter'=> $statusFilter ?: 'all',
-            'active_tab'    => 'enquiries'
+            'title' => 'Enquiry & Quotation Management | Ambros Admin',
+            'enquiries' => array_reverse($enquiries),
+            'current_filter' => $statusFilter ?: 'all',
+            'active_tab' => 'enquiries'
         ]);
     }
 
     public function updateEnquiryStatus()
     {
-        if ($redirect = $this->checkAuth()) return $redirect;
+        if ($redirect = $this->checkAuth())
+            return $redirect;
 
         $id = $this->request->getPost('id');
         $newStatus = $this->request->getPost('status');
@@ -476,10 +491,11 @@ class Admin extends BaseController
 
     public function deleteEnquiry(string $id)
     {
-        if ($redirect = $this->checkAuth()) return $redirect;
+        if ($redirect = $this->checkAuth())
+            return $redirect;
 
         $enquiries = $this->loadEnquiries();
-        $enquiries = array_values(array_filter($enquiries, function($e) use ($id) {
+        $enquiries = array_values(array_filter($enquiries, function ($e) use ($id) {
             return ($e['id'] ?? '') !== $id;
         }));
 
@@ -489,12 +505,13 @@ class Admin extends BaseController
 
     public function exportEnquiries()
     {
-        if ($redirect = $this->checkAuth()) return $redirect;
+        if ($redirect = $this->checkAuth())
+            return $redirect;
 
         $enquiries = $this->loadEnquiries();
 
         header('Content-Type: text/csv; charset=utf-8');
-        header('Content-Disposition: attachment; filename=ambross_enquiries_' . date('Y-m-d') . '.csv');
+        header('Content-Disposition: attachment; filename=Ambros_enquiries_' . date('Y-m-d') . '.csv');
 
         $output = fopen('php://output', 'w');
         fputcsv($output, ['ID', 'Date', 'Name', 'Email', 'Phone', 'Country', 'City', 'Product Code', 'Product Name', 'Category', 'Message', 'Status', 'IP']);
