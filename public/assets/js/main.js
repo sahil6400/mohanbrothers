@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateMobileThemeText(theme);
   };
 
-  const currentTheme = document.documentElement.getAttribute('data-theme') || localStorage.getItem('Ambros_theme') || localStorage.getItem('ambross_theme') || 'light';
+  const currentTheme = 'light';
   applyTheme(currentTheme);
 
   const handleToggle = () => {

@@ -20,7 +20,7 @@
         <!-- Right Controls (Right: flex 1, justify-content: flex-end) -->
         <div class="nav-controls-col">
             <!-- Theme Toggle Button (Dark / Light) -->
-            <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark / Light Theme"
+            <!--<button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark / Light Theme"
                 title="Toggle Dark / Light Mode">
                 <span class="theme-icon-sun" aria-hidden="true">
                     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -42,7 +42,7 @@
                         <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
                     </svg>
                 </span>
-            </button>
+            </button>-->
 
             <button type="button" class="nav-search-btn" id="navSearchBtn" aria-label="Search"
                 title="Search apparatus & labs (Ctrl+K)">
@@ -75,6 +75,7 @@
     <a href="<?= base_url('#contact') ?>" class="mobile-nav-link">Resources</a>
     <a href="<?= base_url('#contact') ?>" class="mobile-nav-link">Contact</a>
 
+    <!-- Mobile Theme Toggle (Commented out - default white theme)
     <div class="mobile-theme-wrapper">
         <span class="mobile-theme-label">Appearance</span>
         <button type="button" class="mobile-theme-toggle-btn" id="mobileThemeToggle">
@@ -86,4 +87,5 @@
             <span>Toggle Theme</span>
         </button>
     </div>
+    -->
 </div>

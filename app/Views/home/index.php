@@ -76,7 +76,7 @@
         <div class="labs-list">
             <?php foreach ($labs as $i => $lab): ?>
                 <div class="fade-up" data-delay="<?= $i * 50 ?>">
-                    <a href="<?= base_url('category/' . esc($lab['slug'])) ?>" class="lab-row-item">
+                    <a href="#" class="lab-row-item">
                         <div class="lab-row-thumb">
                             <img src="<?= esc($lab['img']) ?>" alt="<?= esc(str_replace("\n", ' ', $lab['title'])) ?>"
                                 loading="lazy">

@@ -20,7 +20,10 @@
     <meta property="og:image" content="<?= base_url('assets/images/logo.png') ?>">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="<?= base_url('assets/images/logo.png') ?>">
+    <link rel="icon" type="image/x-icon" href="<?= base_url('favicon.ico') ?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('assets/images/favicon-32x32.png') ?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/images/favicon-16x16.png') ?>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('assets/images/apple-touch-icon.png') ?>">
 
     <!-- Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,15 +32,10 @@
     <!-- Application Stylesheets -->
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>?v=<?= time() ?>">
 
-    <!-- Inline Theme Initializer to prevent flash of wrong theme (Default: Light Theme) -->
+    <!-- Inline Theme Initializer (Default: Light / White Theme) -->
     <script>
         (function () {
-            var savedTheme = localStorage.getItem('Ambros_theme') || localStorage.getItem('ambross_theme');
-            if (savedTheme === 'dark') {
-                document.documentElement.setAttribute('data-theme', 'dark');
-            } else {
-                document.documentElement.setAttribute('data-theme', 'light');
-            }
+            document.documentElement.setAttribute('data-theme', 'light');
         })();
     </script>
 
